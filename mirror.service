@@ -1,0 +1,13 @@
+[Unit]
+Description=Magic mirror nodejs server
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/mirror/
+ExecStart=/usr/local/bin/node serveronly
+Type=simple
+User=pi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
